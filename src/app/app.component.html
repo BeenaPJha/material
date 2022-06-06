@@ -6,8 +6,8 @@
       <mat-grid-tile *ngFor="let image of imageData">
         <mat-card-actions>
           <button mat-raised-button>Like</button>
+          <img [src]="image.download_url" />
         </mat-card-actions>
-        <img [src]="image.download_url" />
       </mat-grid-tile>
     </mat-grid-list>
   </mat-card>

@@ -9,12 +9,12 @@ import { ImageapiService } from './imageapi.service';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
   imageData: any;
-  constructor(private imageapi: ImageapiService) {}
-
-  ngOnInit() {
+  constructor(private imageapi: ImageapiService) {
     this.imageapi.getImage().subscribe((data) => {
       this.imageData = data;
       console.log('imageData =================', data);
     });
   }
+
+  ngOnInit() {}
 }
